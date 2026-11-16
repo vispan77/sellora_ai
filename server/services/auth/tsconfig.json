@@ -1,0 +1,77 @@
+// {
+//   // Visit https://aka.ms/tsconfig to read more about this file
+//   "compilerOptions": {
+//     // File Layout
+//     // "rootDir": "./src",
+//     // "outDir": "./dist",
+
+//     // Environment Settings
+//     // See also https://aka.ms/tsconfig/module
+//     "module": "nodenext",
+//     "target": "esnext",
+//     "types": [],
+//     // For nodejs:
+//     // "lib": ["esnext"],
+//     // "types": ["node"],
+//     // and npm install -D @types/node
+
+//     // Other Outputs
+//     "sourceMap": true,
+//     "declaration": true,
+//     "declarationMap": true,
+
+//     // Stricter Typechecking Options
+//     "noUncheckedIndexedAccess": true,
+//     "exactOptionalPropertyTypes": true,
+
+//     // Style Options
+//     // "noImplicitReturns": true,
+//     // "noImplicitOverride": true,
+//     // "noUnusedLocals": true,
+//     // "noUnusedParameters": true,
+//     // "noFallthroughCasesInSwitch": true,
+//     // "noPropertyAccessFromIndexSignature": true,
+
+//     // Recommended Options
+//     "strict": true,
+//     "jsx": "react-jsx",
+//     "verbatimModuleSyntax": true,
+//     "isolatedModules": true,
+//     "noUncheckedSideEffectImports": true,
+//     "moduleDetection": "force",
+//     "skipLibCheck": true,
+//   }
+// }
+
+
+
+
+//modifield configuration for our project
+{
+  "compilerOptions": {
+    "target": "ES2022",                 // JavaScript target version
+    "module": "NodeNext",               // Node.js module system
+    "moduleResolution": "NodeNext",     // Module resolution strategy
+
+    "rootDir": "./src",                 // TypeScript source folder
+    "outDir": "./dist",                 // Compiled JavaScript folder
+
+    "types": ["node"],                  // Node.js type definitions
+
+    "strict": true,                     // Enable strict type checking
+    "esModuleInterop": true,            // Improve module compatibility
+
+    "skipLibCheck": true,               // Skip library declaration checking
+    "forceConsistentCasingInFileNames": true // Keep file-name casing consistent
+  },
+
+  "include": [
+    "src/**/*.ts",                      // Include TypeScript files
+    "src/**/*.d.ts"                     // Include declaration files
+  ],
+
+  "exclude": [
+    "node_modules",                     // Ignore dependencies
+    "dist"                              // Ignore compiled files
+  ]
+}
