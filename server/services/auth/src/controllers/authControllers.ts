@@ -23,6 +23,8 @@ const login = async(req: Request, res: Response) => {
                 email: decoded.email || ""
             })
         }
+
+        const session = crypto.randomUUID();
     } catch (error) {
         
     }
