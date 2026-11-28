@@ -18,7 +18,7 @@ function Home() {
         try {
             const result = await signInWithPopup(auth, provoder);
             const token = await result?.user?.getIdToken();
-            const response = await api.post("/auth", {
+            const response = await api.post("/auth/login", {
                 token
             })
             console.log(response)
