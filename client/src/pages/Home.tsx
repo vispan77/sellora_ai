@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { FcGoogle } from 'react-icons/fc';
 import { signInWithPopup } from 'firebase/auth';
-import { auth, provoder } from '@/utils/firebase';
+import { auth, provider } from '@/utils/firebase';
 import api from '@/utils/api';
 
 
@@ -16,7 +16,7 @@ function Home() {
 
     const googleAuth = async () => {
         try {
-            const result = await signInWithPopup(auth, provoder);
+            const result = await signInWithPopup(auth, provider);
             const token = await result?.user?.getIdToken();
             const response = await api.post("/auth/login", {
                 token
