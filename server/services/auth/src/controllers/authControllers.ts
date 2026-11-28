@@ -45,10 +45,10 @@ const login = async (req: Request, res: Response) => {
         })
 
         //return success response using helper function
-        return successResponse(201, true, "User logged in successfully", user)
+        return successResponse(res, 201, true, "User logged in successfully", user)
 
     } catch (error) {
-        return errorResponse(500, false, `Login failed ${error}`)
+        return errorResponse(res, 500, false, `Login failed ${error}`)
     }
 }
 
@@ -71,9 +71,9 @@ const logout = async (req: Request, res: Response) => {
             sameSite: "strict",
         });
 
-        return successResponse(200, true, "User Logout Successfully")
+        return successResponse(res, 200, true, "User Logout Successfully")
     } catch (error) {
-        return errorResponse(500, false, `Logout failed ${error}`)
+        return errorResponse(res, 500, false, `Logout failed ${error}`)
     }
 }
 
